@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="textdisplay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1280.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WorldViewer">
+   <children>
+      <ImageView fx:id="viewer" fitHeight="599.0" fitWidth="1152.0" layoutX="64.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="lookleft" layoutX="436.0" layoutY="667.0" mnemonicParsing="false" onAction="#lookLeft" text="LOOK LEFT" />
+      <Button fx:id="lookright" layoutX="742.0" layoutY="667.0" mnemonicParsing="false" onAction="#lookright" text="LOOK RIGHT" />
+      <Button fx:id="accelerate" layoutX="988.0" layoutY="639.0" mnemonicParsing="false" onAction="#Accelerate" prefHeight="40.0" prefWidth="188.0" text="ACCELERATE" />
+      <Button fx:id="lookback" layoutX="581.0" layoutY="693.0" mnemonicParsing="false" onAction="#lookback" text="LOOK BACK" />
+      <MenuBar fx:id="Menubar" layoutY="-2.0" prefHeight="31.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Actions">
+            <items>
+              <MenuItem fx:id="pickup" mnemonicParsing="false" onAction="#pickUp" text="Pick up" />
+                  <MenuItem fx:id="putdown" mnemonicParsing="false" onAction="#putDown" text="Put down" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="Infoguide" mnemonicParsing="false" onAction="#infoGuide" text="Info Guide" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="info" layoutX="14.0" layoutY="658.0" prefHeight="70.0" prefWidth="380.0" />
+      <Button fx:id="rightturn" layoutX="1099.0" layoutY="689.0" mnemonicParsing="false" onAction="#turnright" prefHeight="40.0" prefWidth="141.0" text="TURN RIGHT" />
+      <ImageView fx:id="view" fitHeight="150.0" fitWidth="200.0" layoutX="540.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="lookfront" layoutX="574.0" layoutY="643.0" mnemonicParsing="false" onAction="#lookfront" prefHeight="33.0" prefWidth="141.0" text="LOOK FRONT" />
+      <Button fx:id="leftturn" layoutX="908.0" layoutY="689.0" mnemonicParsing="false" onAction="#turnleft" prefHeight="40.0" prefWidth="141.0" text="TURN LEFT" />
+   </children>
+</AnchorPane>
